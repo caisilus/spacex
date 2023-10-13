@@ -9,8 +9,15 @@
 .content {
     flex-grow: 0.7;
 }
+
+.launchItem:hover {
+    background-color: lightgray;
+    cursor: pointer;
+    font-weight: bold;
+}
+
 #listContainer{
-    height: 300px;
+    height: 500px;
     overflow: hidden;
     overflow-y: scroll;
     border: black 1px solid;

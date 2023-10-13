@@ -12,14 +12,25 @@ function setup(){
         drawMap();
     })
 }
+
 function renderLaunches(launches, container){
     const list = document.createElement("ul");
     launches.forEach(launch=>{
-        const item = document.createElement("li");
-        item.innerHTML = launch.name;
+        const item = launchItem(launch)
         list.appendChild(item);
     })
     container.replaceChildren(list);
+}
+
+function launchItem(launch) {
+    const item = document.createElement("li");
+    item.innerHTML = launch.name;
+    item.classList.add("launchItem")
+    item.onmouseover = (event) => {
+        console.log(launch.name)
+    }
+
+    return item
 }
 
 function drawMap(){
